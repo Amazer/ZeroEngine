@@ -93,6 +93,6 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
     }       //enf of switch
 
     //Handle any messages the switch statement didn't
-    return DefWindowProc(HWnd,message,wParam,lParam);
+    return DefWindowProc(hWnd,message,wParam,lParam);
 }  //end of CALLBACK WindowProc
 
