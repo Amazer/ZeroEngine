@@ -1,6 +1,10 @@
 #include <windows.h>
 #include <windowsx.h>
 #include <tchar.h>
+
+// use developer Command Prompt: cl -l user32.lib -o helloworld_win.exe helloworld_win.c
+// use clang: clang -l user32.lib -o helloworld_win.exe helloworld_win.c
+
 // the WindowProc function prototype
 LRESULT CALLBACK WindowProc(HWND hWnd,
         UINT message,
