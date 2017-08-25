@@ -24,8 +24,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     // fill in the struct with the needed information
     wc.cbSize = sizeof(WNDCLASSEX);
-    wc.style = CS_HREADRAW | CS_VREADRAW;
-    wc.lpfnWnProc = WindowProc;
+    wc.style = CS_HREDRAW | CS_VREDRAW;
+    wc.lpfnWndProc = WindowProc;
     wc.hInstance = hInstance;
     wc.hCursor = LoadCursor(NULL,IDC_ARROW);
     wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
@@ -84,7 +84,7 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
     {
 
         // this message is read when the window is closed
-        case WM_DESTORY:
+        case WM_DESTROY:
             {
                 // close the application entirely
                 PostQuitMessage(0);
