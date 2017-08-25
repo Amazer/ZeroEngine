@@ -1,8 +1,8 @@
 #pragma once
-#include "IRunTimeModule.hpp"
+#include "IRuntimeModule.cpp"
 namespace ZE
 {
-    class GraphicsManager : implements IRuntimeModele
+    class GraphicsManager : implements IRuntimeModule
     {
         public:
             virtual ~ GraphicsManager(){}
