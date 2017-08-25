@@ -35,7 +35,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     RegisterClassEx(&wc);
 
     // create the window and use the result as the handle
-    hWnd = CreateWindowWX(0,
+    hWnd = CreateWindowEx(0,
             _T("WindowClass1"),         // name of the window class
             _T("Hello,Zero Engine!"),   // title of the window
             WS_OVERLAPPEDWINDOW,        // window style
