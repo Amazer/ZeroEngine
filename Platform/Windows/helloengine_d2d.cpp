@@ -17,7 +17,7 @@ inline void SafeRelease(T **ppInterfaceToRelease)
 	if (*ppInterfaceToRelease != nullptr)
 	{
 		(*ppInterfaceToRelease)->Release();
-		(*ppInterfaceToRelease) = nullptr();
+		(*ppInterfaceToRelease) = nullptr;
 	}
 }	// end of Safe Release
 
