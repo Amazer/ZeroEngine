@@ -4,3 +4,5 @@ test/*
 .vs
 *.exe
 *.obj
+*.ilk
+*.pdb

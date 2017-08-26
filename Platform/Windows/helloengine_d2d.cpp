@@ -159,8 +159,10 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 				D2D1_FACTORY_TYPE_SINGLE_THREADED,
 				&pFactory)))
 			{
-				result = -1;
+				result = -1;		//Fail CrateWindowEx.
 			}
+			wasHandled = true;
+			result = 1;
 		}
 		break;
 		case WM_PAINT:
@@ -197,8 +199,8 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 				for (int y = 0; y < height; y += 10)
 				{
 					pRenderTarget->DrawLine(
-						D2D1::Point2F(static_cast<FLOAT>(y), 0.0f),
-						D2D1::Point2F(static_cast<FLOAT>(y), rtSize.width),
+						D2D1::Point2F(0.0f, static_cast<FLOAT>(y)),
+						D2D1::Point2F(rtSize.width, static_cast<FLOAT>(y)),
 						pLightSlateGrayBrush,
 						0.5f
 					);
