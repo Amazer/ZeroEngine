@@ -40,8 +40,8 @@ HRESULT CreateGraphicsResources(HWND hWnd)
 
 		if (SUCCEEDED(hr))
 		{
-			hr = pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::CornflowerBlue),
-				&pCornflowerBlueBrush);
+			hr = pRenderTarget->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::LightSlateGray),
+				&pLightSlateGrayBrush);
 		}
 
 		if (SUCCEEDED(hr))
